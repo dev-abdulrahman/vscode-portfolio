@@ -11,7 +11,8 @@ import {
   Package,
   GraduationCap,
   Sun,
-  Moon
+  Moon,
+  Github, Linkedin, Instagram, Facebook,
 } from 'lucide-react';
 import { useStore } from '../../store/useStore';
 import { About } from '../sections/About';
