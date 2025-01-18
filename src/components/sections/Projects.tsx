@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
+import ali from './../../images/ali.png';
 
 const projects = [
   {
@@ -21,7 +22,7 @@ const projects = [
     technologies: ['React', 'ASP.NET Core', 'Web API'],
     github: '#',
     demo: '#',
-    image: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d',
+    image: ali,
   },
   {
     id: '3',

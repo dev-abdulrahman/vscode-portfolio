@@ -48,6 +48,28 @@ export const Blogs = () => {
     return day + '/' + month + '/' + year;
   };
 
+  const getLocalStorage = (key: string) => {
+    if (
+      localStorage.getItem(key) === null ||
+      localStorage.getItem(key) === undefined
+    ) {
+      let count = getNumbers();
+      localStorage.setItem(key, count.toString());
+      return count;
+    }
+    return localStorage.getItem(key);
+  };
+
+  const getLikesCount = (guid: string) => {
+    let keyName = guid + 'likes';
+    return getLocalStorage(keyName);
+  };
+
+  const getCommentsCount = (guid: string) => {
+    let keyName = guid + 'comments';
+    return getLocalStorage(keyName);
+  };
+
   const getNumbers = () => {
     const min = 1;
     const max = 20;
@@ -98,11 +120,11 @@ export const Blogs = () => {
                   <div className='flex space-x-4'>
                     <span className='flex items-center space-x-1'>
                       <Heart className='w-4 h-4 fill-red-600' />
-                      {<span>{getNumbers()}</span>}
+                      {<span>{getLikesCount(blog.guid)}</span>}
                     </span>
                     <span className='flex items-center space-x-1'>
                       <MessageCircle className='w-4 h-4 fill-white' />
-                      {<span>{getNumbers()}</span>}
+                      {<span>{getCommentsCount(blog.guid)}</span>}
                     </span>
                   </div>
                 </div>
