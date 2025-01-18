@@ -8,7 +8,7 @@ import {
   Rocket,
 } from 'lucide-react';
 import profile from './../../images/profile.jpg';
-import { RocketGIF } from './RocketGIF';
+// import rocket from './../../images/rocket.png';
 
 export const About = () => {
   return (
@@ -76,9 +76,13 @@ export const About = () => {
             alt='Profile'
             className='w-48 h-48 rounded-full object-cover'
           />
-          <button className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600'>
+          <a
+            href='https://drive.google.com/file/d/1Mny9OuUKGpFiezVQvC800YfUmVetPdro/view?usp=sharing'
+            className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600'
+            target='_blank'
+          >
             Get Resume <ArrowDownToLine className='w-4 h-4 inline-block' />
-          </button>
+          </a>
         </div>
       </div>
       <div className='space-y-4 text-lg ml-2 '>
@@ -101,7 +105,12 @@ export const About = () => {
               solutions, and sharing my knowledge with the developer community
               through my Instagram page and blog on .NET and C#. I am always
               eager to learn and grow. Let's build something amazing together!{' '}
-              <Rocket className='inline-block text-sky-400 hover:text-sky-800' />
+              {/* <Rocket className='inline-block text-sky-400 hover:text-sky-800' /> */}
+              {/* <img
+                src={rocket}
+                alt='Profile'
+                className='w-8 h-8 inline-block rounded-full bg-sky-100'
+              /> */}
               {/* <RocketGIF /> */}
             </div>
           </p>
